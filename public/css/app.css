@@ -1,0 +1,59 @@
+body {
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+.active-btn {
+    background-color: #2454e3;
+    color: #fff;
+}
+
+/* css tab, tab button */
+.tab-header {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-header button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 0 2px 0;
+}
+
+.form-meal,
+.form-restaurant,
+.form-dish,
+.form-review {
+    margin: 20px auto 0;
+    width: 500px;
+}
+
+.btn-container-restaurant, .btn-container-dish {
+    margin-top: 150px;
+}
+
+.btn-add-dish {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+
+.list-added-dist {
+    display: block !important;
+    margin-top: 20px;
+}
+
+.container-dish-div {
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.container-dish-ul {
+    display: block !important;
+}
