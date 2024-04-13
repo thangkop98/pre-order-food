@@ -183,7 +183,7 @@
         // handle add dishes when click plus button in form select dishes
         function handleAddDishes()
         {
-            let maxQuantityMealCanServe = '<?php echo (isset($quantityMeal) ? $quantityMeal : 0); ?>';
+            let maxQuantityMealCanServe = 10;
             let dishSelectValue = dishSelect.value;
             let dishServingValue = dishServing.value;
 
@@ -212,7 +212,7 @@
                     });
 
                     localStorage.setItem('list_dishes', JSON.stringify(arrDishes));
-
+                    console.log(dishServingValue, maxQuantityMealCanServe)
                     if(dishServingValue <= maxQuantityMealCanServe)
                     {
                         arrDishes.forEach((element,index) => {

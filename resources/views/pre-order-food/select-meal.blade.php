@@ -9,9 +9,9 @@
           <label for="" class="form-label">Please select a meal</label>
           <select class="form-select" aria-label="Choose Meal" name="meal" id="meal-select" required>
               <option selected value="">---- Choose meal ----</option>
-              <option value="breakfast" {{ $nameMeal == 'breakfast' ? 'selected' : '' }} >Breakfast</option>
-              <option value="lunch" {{ $nameMeal == 'lunch' ? 'selected' : '' }} >Lunch</option>
-              <option value="dinner" {{ $nameMeal == 'dinner' ? 'selected' : '' }} >Dinner</option>
+              <option value="breakfast" {{ ($nameMeal != ""  && $nameMeal == 'breakfast') ? 'selected' : '' }} >Breakfast</option>
+              <option value="lunch" {{ ($nameMeal != ""  && $nameMeal == 'lunch') ? 'selected' : '' }} >Lunch</option>
+              <option value="dinner" {{ ($nameMeal != ""  && $nameMeal == 'dinner') ? 'selected' : '' }} >Dinner</option>
           </select>
           <span id="error-meal-select"></span>
         </div>

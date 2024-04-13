@@ -8,8 +8,8 @@ class PreOrderController extends Controller
 {
     public function selectMeal(Request $request)
     {
-        $quantityMeal = session('meal_info')['quantity'];
-        $nameMeal = session('meal_info')['meal'];
+        $quantityMeal = session('meal_info') !== null ? session('meal_info')['quantity'] : "";
+        $nameMeal = session('meal_info') != null ? session('meal_info')['meal'] : "";
 
         return view('pre-order-food.select-meal', compact('quantityMeal', 'nameMeal'));
     }
@@ -46,7 +46,7 @@ class PreOrderController extends Controller
             $listRetaurants = $mealInfo['list_restaurants'];
         }
 
-        $restaurantInSession = session('restaurant_info')['restaurant'];
+        $restaurantInSession = session('restaurant_info') != null ? session('restaurant_info')['restaurant'] : "";
         return view('pre-order-food.select-restaurant', compact('listRetaurants', 'restaurantInSession'));
     }
 

@@ -10,7 +10,7 @@
           <select class="form-select" aria-label="Choose Restaurant" name="restaurant" id="restaurant-select" required>
             <option selected value="">---- Choose restaurant ----</option>
             @foreach ($listRetaurants as $restaurant)
-                <option value="{{ $restaurant }}" {{ $restaurantInSession == $restaurant ? 'selected' : '' }} >{{ $restaurant }}</option>
+                <option value="{{ $restaurant }}" {{ ($restaurantInSession && $restaurantInSession == $restaurant) ? 'selected' : '' }} >{{ $restaurant }}</option>
             @endforeach
           </select>
           @error('restaurant')
